@@ -68,35 +68,31 @@
 
 ```
 k230d-study-vision/
-├── README.md                    # 项目介绍
-├── prepare_dataset.py           # 数据集预处理 (RGBA→RGB, 修复错误)
+├── README.md               # 项目介绍
 ├── .gitignore
-├── study_ai_yolo_stage1/
-│   ├── README.md                # 阶段一详细说明
-│   ├── convert_kmodel.py        # ONNX → KModel 转换脚本
-│   ├── device_canmv/            # K230D 端 7 个 .py 文件
-│   │   ├── main.py              # 主入口
-│   │   ├── config.py            # 集中配置
-│   │   ├── yolo_stage1.py       # YOLOv8 推理封装
-│   │   ├── vision_state.py      # 检测结果解析 + 状态机
-│   │   ├── peripherals.py       # 三色 LED 控制
-│   │   ├── utils.py             # FPS 计时器、调试工具
-│   │   └── test_gpio.py         # GPIO 引脚扫测
-│   ├── models/
-│   │   ├── labels.txt           # 类别标签
-│   │   ├── best.onnx            # 导出 ONNX (11.6 MB)
-│   │   ├── best.pt              # 训练权重 (5.9 MB)
-│   │   └── study_yolov8n_320.kmodel  # K230D 部署模型 (3.2 MB)
-│   ├── training/                # 训练/转换/评估文档
-│   │   ├── train_yolov8.md      # YOLO训练方案
-│   │   ├── export_onnx.md       # ONNX导出方案
-│   │   ├── convert_to_kmodel.md # nncase转换方案
-│   │   ├── evaluate.md          # 评估标准
-│   │   └── dataset_guide.md     # 数据集采集指南
-│   └── dataset_tools/           # 数据集处理工具
-│       ├── dataset.yaml         # 训练配置文件
-│       ├── split_dataset.py     # 70/20/10 划分
-│       └── check_yolo_labels.py # 标注格式检查
+├── prepare_dataset.py      # 数据集预处理 (RGBA→RGB, 修复错误)
+├── convert_kmodel.py       # ONNX → KModel 转换脚本
+├── device_canmv/           # K230D 端 7 个 .py 文件
+│   ├── main.py             # 主入口
+│   ├── config.py           # 集中配置
+│   ├── yolo_stage1.py      # YOLOv8 推理封装
+│   ├── vision_state.py     # 检测结果解析 + 状态机
+│   ├── peripherals.py      # 三色 LED 控制
+│   ├── utils.py            # FPS 计时器、调试工具
+│   └── test_gpio.py        # GPIO 引脚扫测
+├── models/                 # 模型与标签 (大模型文件通过 Releases 下载)
+│   ├── labels.txt          # 类别标签
+│   └── put_kmodel_here.txt # 模型放置说明
+├── training/               # 训练/转换/评估文档
+│   ├── train_yolov8.md     # YOLO训练方案
+│   ├── export_onnx.md      # ONNX导出方案
+│   ├── convert_to_kmodel.md# nncase转换方案
+│   ├── evaluate.md         # 评估标准
+│   └── dataset_guide.md    # 数据集采集指南
+└── dataset_tools/          # 数据集处理工具
+    ├── dataset.yaml        # 训练配置文件
+    ├── split_dataset.py    # 70/20/10 划分
+    └── check_yolo_labels.py# 标注格式检查
 ```
 
 ---
