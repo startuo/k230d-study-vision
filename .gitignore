@@ -38,5 +38,8 @@ study_ai_yolo_stage1/tmp/
 # 无关压缩包
 *.zip
 
+# 期末报告 (单独提交)
+期末报告/
+
 # F 盘包目录
 F:/py_pkgs/
