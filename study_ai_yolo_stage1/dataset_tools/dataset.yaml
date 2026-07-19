@@ -1,0 +1,27 @@
+# YOLOv8 数据集配置文件 — Stage 1
+# 用于 Ultralytics YOLOv8 训练
+#
+# 用法:
+#   yolo detect train data=dataset.yaml model=yolov8n.pt epochs=100 imgsz=320
+
+# 数据集根目录（如果 dataset.yaml 放在数据集根目录，用 "."）
+path: .
+
+# 训练集 (70%)
+train: images/train
+
+# 验证集 (20%)
+val: images/val
+
+# 测试集 (10%)
+test: images/test
+
+# 类别数
+nc: 4
+
+# 类别名称
+names:
+  0: person
+  1: phone
+  2: book
+  3: laptop

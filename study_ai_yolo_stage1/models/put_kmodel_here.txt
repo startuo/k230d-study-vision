@@ -1,0 +1,11 @@
+模型文件说明 — Stage 1
+
+已有文件:
+  best.onnx (11.6 MB) — ONNX 格式，opset=12，输入 (1,3,320,320)，等待 nncase 转换
+  best.pt  (5.9 MB) — PyTorch 权重，训练产出
+  labels.txt          — 类别标签: person / phone / book (3类)
+
+下一步: 用 nncase 将 best.onnx 转换为 study_yolov8n_320.kmodel
+转换后拷贝到 K230D: /sdcard/models/study_yolov8n_320.kmodel
+
+详细转换步骤见: training/convert_to_kmodel.md

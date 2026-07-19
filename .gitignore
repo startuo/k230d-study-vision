@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 训练产出
+runs_study/
+runs/
+calib_set/
+yolov8n.pt
+
+# 数据集 (大文件)
+dataset_study_yolo/
+images/
+labels/
+
+# 模型 (可重新导出/转换)
+models/best.onnx
+models/best.pt
+models/study_yolov8n_320.kmodel
+
+# pip 本地包
+F:/py_pkgs/
+
+# nncase 编译中间产物
+tmp/
+study_ai_yolo_stage1/tmp/
+
+# YOLO 缓存
+*.cache
+
+# wheel 安装包
+*.whl
+
+# 无关压缩包
+*.zip
+
+# F 盘包目录
+F:/py_pkgs/
